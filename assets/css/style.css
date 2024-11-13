@@ -1666,6 +1666,33 @@ h1#modalTitle {
   /* Vertically center images within each grid cell */
 }
 
+/* Responsive grid layout */
+@media (min-width: 1200px) {
+  .tool_img_container {
+    grid-template-columns: repeat(6, 1fr); /* 6 images per row on large screens. height is 400px */
+    
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .tool_img_container {
+    grid-template-columns: repeat(5, 1fr); /* 5 images per row on medium screens height is 400px */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .tool_img_container {
+    grid-template-columns: repeat(4, 1fr); /* 4 images per row on tablets. Height need 460px */
+  }
+}
+
+@media (max-width: 767px) {
+  .tool_img_container {
+    grid-template-columns: repeat(2, 1fr); /* 2 images per row on small screens.height need 700px */
+  }
+}
+
+
 .view-tools:is(:hover, :focus) {
   /* transform: scale(1.2);
   transition: transform 0.s ease; */
